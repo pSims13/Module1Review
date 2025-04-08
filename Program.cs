@@ -17,11 +17,18 @@ class Program
 
     }
 
-    public static double FindTheAreaOfRectangle(double length, double height)
+    public static double FindTheAreaOfRectangle(double length, double width)
     {
 
-        return length * height;
+        return length * width;
 
+    }
+
+    public static double FindTheAreaOfSquare(double side)
+    {
+        
+        return side * side;
+        
     }
     
     static void Main(string[] args)
@@ -37,7 +44,15 @@ class Program
         double baseLength = double.Parse(Console.ReadLine());
         Console.WriteLine($"The area of your triangle is {FindAreaOfTriangle(baseLength, height)}.");
         
+        Console.WriteLine("What is the lenght of your rectangle?");
+        double length = double.Parse(Console.ReadLine());
+        Console.WriteLine("What is the width of your rectangle?");
+        double width = double.Parse(Console.ReadLine());
+        Console.WriteLine($"The area of your rectangle is {FindTheAreaOfRectangle(length, width)}");
         
-
+        Console.WriteLine("What is the measurement of one side of your square?");
+        double side = double.Parse(Console.ReadLine());
+        Console.WriteLine($"The area of your square is {FindTheAreaOfSquare(side)}"); 
+        
     }
 }
